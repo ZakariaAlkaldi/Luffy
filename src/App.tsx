@@ -1,0 +1,92 @@
+import "./App.css";
+import Header from "./components/header";
+
+function App() {
+  const pirates = [
+    "luffy",
+    "zoro",
+    "nami",
+    "usopp",
+    "sanji",
+    "chopper",
+    "robin",
+    "franky",
+    "brook",
+    "jinbe",
+  ];
+
+  return (
+    <>
+      <Header
+        logo={{ image: "/imgs/logo.png", name: "Luffy" }}
+        links={["Home", "About", "Crew"]}
+      />
+      <section
+        className="h-[85vh] mb-[20px] bg-[url(/imgs/bg5.jpg)] bg-contain rounded-2xl flex justify-center items-center relative"
+        id="home"
+      >
+        <div className="w-full h-full absolute top-0 left-0 bg-black opacity-[0.5] "></div>
+        <h2 className="text-[200px] text-white font-bold uppercase absolute top-[50px]">
+          one peice
+        </h2>
+        <img
+          src="imgs/luffy-bg.png"
+          className="w-[500px] absolute bottom-30 hover:rotate-[45deg] duration-500"
+          alt="Luffy"
+        />
+      </section>
+      <section
+        id="about"
+        className="w-full h-fit mb-[20px] flex flex-col gap-2"
+      >
+        <h2 className="w-fit mx-auto my-[20px] text-white text-[30px] font-bold uppercase">
+          who is luffy
+        </h2>
+        <div className="flex justify-between items-center bg-[#6f6f6f26] p-[20px] rounded-2xl">
+          <p className="w-[65%] text-white text-[18px]">
+            Monkey D. Luffy is the main protagonist of One Piece, a globally
+            popular manga and anime series created by Eiichiro Oda. He is a
+            carefree yet determined pirate whose dream is to find the legendary
+            treasure known as the “One Piece” and become the Pirate King. After
+            accidentally eating the Gum-Gum Fruit, a mystical Devil Fruit, Luffy
+            gained the ability to stretch his body like rubber, which he
+            creatively uses in combat. Despite his playful and sometimes goofy
+            personality, he has an unshakable will, an unyielding sense of
+            justice, and deep loyalty to his friends, whom he considers his
+            family. Luffy’s adventurous spirit, resilience, and unwavering
+            belief in freedom make him one of the most inspiring and beloved
+            characters in anime and manga history.
+          </p>
+          <div className="w-[290px] rounded-2xl overflow-hidden">
+            <img src="imgs/luffy-about.jpg" className="w-full" alt="Luffy" />
+          </div>
+        </div>
+      </section>
+      <section
+        className="mb-[20px] bg-[url(/imgs/ship.png)] bg-size-[80px]  bg-repeat-space"
+        id="crew"
+      >
+        <h2 className="w-fit mx-auto my-[40px] text-white text-[30px] font-bold bg-[#000] rounded-2xl uppercase">
+          Crew members
+        </h2>
+        <div className="grid grid-cols-3 gap-8">
+          {pirates.map((pirate) => (
+            <img
+              src={`/imgs/${pirate}.jpg`}
+              className="w-[300px] h-[400px] rounded-2xl hover:scale-108 duration-300"
+              alt=""
+            />
+          ))}
+        </div>
+      </section>
+      <footer className="flex justify-center items-center gap-2 bg-[#6f6f6f26] m-[20px] rounded-2xl">
+        <p className="text-white text-[18px] font-bold capitalize">
+          made with &#10084; by Luffy
+        </p>
+        <img src="/imgs/footer.png" className="w-[100px] mb-[-8px]" alt="footer photo" />
+      </footer>
+    </>
+  );
+}
+
+export default App;
