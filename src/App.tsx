@@ -77,7 +77,11 @@ function App() {
         <p className="text-white text-[18px] font-bold capitalize">
           made with &#10084; by Luffy
         </p>
-        <img src="/imgs/footer.png" className="w-25 -mb-2" alt="footer photo" />
+        <img
+          src={`${import.meta.env.BASE_URL}imgs/footer.png`}
+          className="w-25 -mb-2"
+          alt="footer photo"
+        />
       </footer>
     </>
   );
