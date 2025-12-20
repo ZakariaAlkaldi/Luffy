@@ -19,7 +19,7 @@ function App() {
     <>
       <Header
         logo={{
-          image: `${import.meta.env.BASE_URL}/imgs/logo.png`,
+          image: `${import.meta.env.BASE_URL}imgs/logo.png`,
           name: "Luffy",
         }}
         links={["Home", "About", "Crew"]}
