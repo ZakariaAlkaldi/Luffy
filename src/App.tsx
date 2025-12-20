@@ -66,7 +66,7 @@ function App() {
         <div className="grid grid-cols-3 gap-8">
           {pirates.map((pirate) => (
             <img
-              src={`/imgs/${pirate}.jpg`}
+              src={`${import.meta.env.BASE_URL}imgs/${pirate}.jpg`}
               className="w-75 h-100 rounded-2xl hover:scale-108 duration-300"
               alt=""
             />
