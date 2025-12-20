@@ -17,13 +17,7 @@ function App() {
 
   return (
     <>
-      <Header
-        logo={{
-          image: `${import.meta.env.BASE_URL}imgs/logo.png`,
-          name: "Luffy",
-        }}
-        links={["Home", "About", "Crew"]}
-      />
+      <Header />
       <section
         className="h-[85vh] mb-5 bg-[url(/imgs/bg5.jpg)] bg-contain rounded-2xl flex justify-center items-center relative"
         id="home"

@@ -1,22 +1,37 @@
 import Navbar from "./navbar";
 
-type HeaderProps = {
-  logo: {
-    image: string;
-    name: string;
-  };
-  links: string[];
-};
+// type HeaderProps = {
+//   logo: {
+//     image: string;
+//     name: string;
+//   };
+//   links: string[];
+// };
 
-function Header({ logo, links }: HeaderProps) {
-  const { image, name } = logo;
+// function Header({ logo, links }: HeaderProps) {
+//   const { image, name } = logo;
+//   return (
+//     <div className="bg-[#6f6f6f26] rounded-2xl px-6 py-2 flex justify-between items-center my-4">
+//       <div className="flex items-center gap-1">
+//         <img src={image} className="w-15" alt="logo" />
+//         <p className="text-white font-bold text-[20px] uppercase">{name}</p>
+//       </div>
+//       <Navbar links={links} />
+//     </div>
+//   );
+// }
+function Header() {
   return (
     <div className="bg-[#6f6f6f26] rounded-2xl px-6 py-2 flex justify-between items-center my-4">
       <div className="flex items-center gap-1">
-        <img src={image} className="w-[60px]" alt="logo" />
-        <p className="text-white font-bold text-[20px] uppercase">{name}</p>
+        <img
+          src={`${import.meta.env.BASE_URL}imgs/logo.png`}
+          className="w-15"
+          alt="logo"
+        />
+        <p className="text-white font-bold text-[20px] uppercase">Luffy</p>
       </div>
-      <Navbar links={links} />
+      <Navbar links={["Home", "About", "Crew"]} />
     </div>
   );
 }
