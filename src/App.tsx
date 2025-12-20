@@ -18,7 +18,10 @@ function App() {
   return (
     <>
       <Header
-        logo={{ image: "/imgs/logo.png", name: "Luffy" }}
+        logo={{
+          image: `${import.meta.env.BASE_URL}/imgs/logo.png`,
+          name: "Luffy",
+        }}
         links={["Home", "About", "Crew"]}
       />
       <section
@@ -35,10 +38,7 @@ function App() {
           alt="Luffy"
         />
       </section>
-      <section
-        id="about"
-        className="w-full h-fit mb-5 flex flex-col gap-2"
-      >
+      <section id="about" className="w-full h-fit mb-5 flex flex-col gap-2">
         <h2 className="w-fit mx-auto my-5 text-white text-[30px] font-bold uppercase">
           who is luffy
         </h2>
